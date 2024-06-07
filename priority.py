@@ -50,7 +50,7 @@ class PriorityQueue:
         self.heap.append(Person)
         self.build_max_heap()
 
-    def pop_Person(self):
+    def pop(self):
         if len(self.heap) == 0:
             print("empty")
         self.build_max_heap()
@@ -83,10 +83,10 @@ if __name__ == "__main__":
     pq.add_Person(p3)
     pq.add_Person(p4)
 
-    print(pq.pop_Person())  # Candidate(Age=22, Skill=C)
-    pq.increase_skill(p2)
-    print(pq.pop_Person())  # Candidate(Age=25, Skill=B)
-    print(pq.pop_Person())  # Candidate(Age=30, Skill=B)
-    print(pq.pop_Person())  # Candidate(Age=30, Skill=B)
+    print(pq.pop())  # Candidate(Age=22, Skill=C)
+    print(pq.pop())  # Candidate(Age=25, Skill=B)
+    print(pq.pop())  # Candidate(Age=30, Skill=B)
+    pq.increase_skill(p3)
+    print(pq.pop())  # Candidate(Age=30, Skill=B)
         
     
